@@ -106,8 +106,11 @@ def other_player(player):
     else:
         return 2
 
-# Step 14 - step_env (not yet solved)
-# TODO: implement
+# Step 14 - step_env
+def step_env(board, column, player):
+    new_board = drop_piece(board, column, player)
+    done, winner = is_terminal(new_board)
+    return (new_board, done, winner, other_player(player))
 
 # Step 15 - encode_board (not yet solved)
 # TODO: implement
