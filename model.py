@@ -99,8 +99,12 @@ def is_terminal(board):
     else:
         return (board_is_full(board), winner)
 
-# Step 13 - other_player (not yet solved)
-# TODO: implement
+# Step 13 - other_player
+def other_player(player):
+    if player==2:
+        return 1
+    else:
+        return 2
 
 # Step 14 - step_env (not yet solved)
 # TODO: implement
