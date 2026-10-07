@@ -87,8 +87,9 @@ def check_winner(board):
     A = [four_in_a_row_diagonal_down_right(board), four_in_a_row_diagonal_up_right(board), four_in_a_row_horizontal(board), four_in_a_row_vertical(board)]
     return max(A)
 
-# Step 11 - board_is_full (not yet solved)
-# TODO: implement
+# Step 11 - board_is_full
+def board_is_full(board):
+    return valid_moves(board)==[]
 
 # Step 12 - is_terminal (not yet solved)
 # TODO: implement
