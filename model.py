@@ -75,8 +75,9 @@ def four_in_a_row_diagonal_down_right(board):
                 return a[i,j]
     return 0
 
-# Step 9 - four_in_a_row_diagonal_up_right (not yet solved)
-# TODO: implement
+# Step 9 - four_in_a_row_diagonal_up_right
+def four_in_a_row_diagonal_up_right(board):
+    return four_in_a_row_diagonal_down_right(np.flipud(board))
 
 # Step 10 - check_winner (not yet solved)
 # TODO: implement
