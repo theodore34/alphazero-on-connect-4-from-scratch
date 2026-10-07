@@ -57,8 +57,14 @@ def four_in_a_row_horizontal(board):
                 return row[i]
     return 0
 
-# Step 7 - four_in_a_row_vertical (not yet solved)
-# TODO: implement
+# Step 7 - four_in_a_row_vertical
+def four_in_a_row_vertical(board):
+    for c in range(7):
+        column = board[:,c]
+        for i in range (3):
+            if (column[i] == column[i+1] == column[i+2] == column[i+3]) and column[i]!=0:
+                return column[i]
+    return 0
 
 # Step 8 - four_in_a_row_diagonal_down_right (not yet solved)
 # TODO: implement
