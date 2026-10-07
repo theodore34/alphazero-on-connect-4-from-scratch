@@ -85,14 +85,15 @@ import numpy as np
 def check_winner(board):
     """Return 1 or 2 if that player has four in a row, else 0."""
     A = [four_in_a_row_diagonal_down_right(board), four_in_a_row_diagonal_up_right(board), four_in_a_row_horizontal(board), four_in_a_row_vertical(board)]
-    return max(A)
+    return int(max(A))
 
 # Step 11 - board_is_full
 def board_is_full(board):
     return valid_moves(board)==[]
 
-# Step 12 - is_terminal (not yet solved)
-# TODO: implement
+# Step 12 - is_terminal
+def is_terminal(board):
+    return (board_is_full(board), check_winner(board))
 
 # Step 13 - other_player (not yet solved)
 # TODO: implement
