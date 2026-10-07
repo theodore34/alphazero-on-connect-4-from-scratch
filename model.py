@@ -22,8 +22,15 @@ def column_top_row(board, column):
             return idx-1
     return 5
 
-# Step 3 - drop_piece (not yet solved)
-# TODO: implement
+# Step 3 - drop_piece
+def drop_piece(board, column, player):
+    new_board = np.copy(board)
+    slot = column_top_row(board, column) 
+    if slot >= 0:
+        new_board[slot, column] = player
+    else:
+        raise ValueError("full")
+    return new_board
 
 # Step 4 - column_full (not yet solved)
 # TODO: implement
