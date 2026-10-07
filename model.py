@@ -17,8 +17,6 @@ def make_empty_board():
 def column_top_row(board, column):
     """Return the lowest empty row in `column`, or -1 if the column is full."""
     row = board[:,column]
-    if row[0] !=0:
-        return -1
     for idx,i in enumerate(row):
         if i!=0:
             return idx-1
