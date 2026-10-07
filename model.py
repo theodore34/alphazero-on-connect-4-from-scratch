@@ -66,8 +66,14 @@ def four_in_a_row_vertical(board):
                 return column[i]
     return 0
 
-# Step 8 - four_in_a_row_diagonal_down_right (not yet solved)
-# TODO: implement
+# Step 8 - four_in_a_row_diagonal_down_right
+def four_in_a_row_diagonal_down_right(board):
+    a = board
+    for i in range(3):
+        for j in range(4):
+            if (a[i,j]==a[i+1,j+1]==a[i+2,j+2]==a[i+3,j+3]) and a[i,j]!=0:
+                return a[i,j]
+    return 0
 
 # Step 9 - four_in_a_row_diagonal_up_right (not yet solved)
 # TODO: implement
