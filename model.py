@@ -48,8 +48,14 @@ def valid_moves(board):
             res.append(i)
     return res
 
-# Step 6 - four_in_a_row_horizontal (not yet solved)
-# TODO: implement
+# Step 6 - four_in_a_row_horizontal
+def four_in_a_row_horizontal(board):
+    for r in range(6):
+        row = board[r,:]
+        for i in range (4):
+            if (row[i] == row[i+1] == row[i+2] == row[i+3]) and row[i]!=0:
+                return row[i]
+    return 0
 
 # Step 7 - four_in_a_row_vertical (not yet solved)
 # TODO: implement
