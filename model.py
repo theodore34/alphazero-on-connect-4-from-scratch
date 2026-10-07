@@ -93,7 +93,11 @@ def board_is_full(board):
 
 # Step 12 - is_terminal
 def is_terminal(board):
-    return (board_is_full(board), check_winner(board))
+    winner = check_winner(board)
+    if winner!=0:
+        return (True, winner)
+    else:
+        return (board_is_full(board), winner)
 
 # Step 13 - other_player (not yet solved)
 # TODO: implement
