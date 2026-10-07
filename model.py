@@ -79,8 +79,13 @@ def four_in_a_row_diagonal_down_right(board):
 def four_in_a_row_diagonal_up_right(board):
     return four_in_a_row_diagonal_down_right(np.flipud(board))
 
-# Step 10 - check_winner (not yet solved)
-# TODO: implement
+# Step 10 - check_winner
+import numpy as np
+
+def check_winner(board):
+    """Return 1 or 2 if that player has four in a row, else 0."""
+    A = [four_in_a_row_diagonal_down_right(board), four_in_a_row_diagonal_up_right(board), four_in_a_row_horizontal(board), four_in_a_row_vertical(board)]
+    return max(A)
 
 # Step 11 - board_is_full (not yet solved)
 # TODO: implement
