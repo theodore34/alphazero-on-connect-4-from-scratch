@@ -13,8 +13,16 @@ def make_empty_board():
     """Return a 6x7 integer numpy array of zeros representing an empty Connect-4 board."""
     return np.zeros(shape=(6,7), dtype=int)
 
-# Step 2 - column_top_row (not yet solved)
-# TODO: implement
+# Step 2 - column_top_row
+def column_top_row(board, column):
+    """Return the lowest empty row in `column`, or -1 if the column is full."""
+    row = board[:,column]
+    if row[0] !=0:
+        return -1
+    for idx,i in enumerate(row):
+        if i!=0:
+            return idx-1
+    return 5
 
 # Step 3 - drop_piece (not yet solved)
 # TODO: implement
