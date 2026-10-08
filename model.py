@@ -112,8 +112,13 @@ def step_env(board, column, player):
     done, winner = is_terminal(new_board)
     return (new_board, done, winner, other_player(player))
 
-# Step 15 - encode_board (not yet solved)
-# TODO: implement
+# Step 15 - encode_board
+def encode_board(board, current_player):
+    """Encode a 6x7 board as a (2, 6, 7) float32 tensor from current_player's view."""
+    encoded_board = np.zeros((2, 6, 7), dtype=np.float32)
+    encoded_board[0] = (board == current_player)
+    encoded_board[1] = (board == other_player(current_player))
+    return encoded_board
 
 # Step 16 - board_to_torch_tensor (not yet solved)
 # TODO: implement
